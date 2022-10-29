@@ -30,7 +30,7 @@ const validateEmail = () => {
 
 const validatePhone = () => {
   const phone = document.getElementById("phone");
-  const re = /^[0-9]{10}$/;
+  const re = /^\(?\d{3}\)?[-. ]?\d{3}[-. ]?\d{4}$/;
   if (!re.test(phone.value)) {
     return phone.classList.add("is-invalid");
   }
